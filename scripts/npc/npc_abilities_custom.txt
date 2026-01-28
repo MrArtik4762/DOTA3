@@ -111,6 +111,11 @@
                 "var_type"              "FIELD_INTEGER"
                 "talent_bonus_attributes" "10"
             }
+            "06"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "shift_interval"        "0.1"
+            }
         }
         
         "precache"
