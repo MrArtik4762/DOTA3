@@ -42,18 +42,22 @@ function modifier_streamer_attribute_shift:OnCreated(kv)
     if not IsServer() then
         return
     end
-    
+
     -- Инициализируем переменные
     self.shift_rate = self:GetAbility():GetSpecialValueFor("shift_rate") or MODIFIER_PROPERTIES.SHIFT_RATE
     self.shift_interval = self:GetAbility():GetSpecialValueFor("shift_interval") or MODIFIER_PROPERTIES.SHIFT_INTERVAL
-    
+    self.talent_bonus = 0
+
     -- Тип перекачки: "str_to_agi" или "agi_to_str"
     self.shift_type = kv.shift_type or "str_to_agi"
-    
+
     -- Счётчики перекачанных статов
     self.bonus_agility = 0
     self.bonus_strength = 0
-    
+
+    -- Применяем бонус от таланта (если есть)
+    self:ApplyTalentBonus()
+
     -- Запускаем таймер перекачки
     self:StartIntervalThink(self.shift_interval)
 end
@@ -66,7 +70,9 @@ function modifier_streamer_attribute_shift:OnRefresh(kv)
     -- Обновляем параметры при рефреше
     self.shift_rate = self:GetAbility():GetSpecialValueFor("shift_rate") or self.shift_rate
     self.shift_interval = self:GetAbility():GetSpecialValueFor("shift_interval") or self.shift_interval
-    
+
+    self:ApplyTalentBonus()
+
     if kv.shift_type then
         self.shift_type = kv.shift_type
     end
@@ -97,11 +103,13 @@ end
 function modifier_streamer_attribute_shift:OnIntervalThink()
     local parent = self:GetParent()
     local ability = self:GetAbility()
-    
+
     if not parent or parent:IsNull() or not ability or ability:IsNull() then
         self:Destroy()
         return
     end
+
+    self:ApplyTalentBonus()
     
     -- Проверяем, активна ли способность (тоггл)
     if not ability:GetToggleState() then
@@ -162,6 +170,42 @@ function modifier_streamer_attribute_shift:OnIntervalThink()
             ability:ToggleAbility()
         end
     end
+end
+
+--------------------------------------------------------------------------------
+-- Талант: бонус атрибутов при Attribute Shift
+--------------------------------------------------------------------------------
+function modifier_streamer_attribute_shift:ApplyTalentBonus()
+    if self.talent_bonus and self.talent_bonus > 0 then
+        return
+    end
+
+    local parent = self:GetParent()
+    local ability = self:GetAbility()
+
+    if not parent or parent:IsNull() or not ability or ability:IsNull() then
+        return
+    end
+
+    local talent = parent:FindAbilityByName("special_bonus_streamer_3")
+    if not talent or talent:GetLevel() == 0 then
+        return
+    end
+
+    local bonus = talent:GetSpecialValueFor("value")
+    if bonus == 0 then
+        bonus = ability:GetSpecialValueFor("talent_bonus_attributes") or 0
+    end
+
+    if bonus <= 0 then
+        return
+    end
+
+    self.talent_bonus = bonus
+    parent:ModifyStrength(bonus)
+    parent:ModifyAgility(bonus)
+    self.bonus_strength = self.bonus_strength + bonus
+    self.bonus_agility = self.bonus_agility + bonus
 end
 
 --------------------------------------------------------------------------------

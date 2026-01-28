@@ -115,14 +115,22 @@
 		"DOTA_Tooltip_ability_streamer_singing_shard_description"		"Каждые 1.5 сек выпускает волну на 700 радиуса, нанося 120 магического урона + 40%% от ловкости"
 
 		// Talents
-		"DOTA_Tooltip_special_bonus_streamer_mystic_shot_range"		"+200 дальности Таинственного выстрела"
-		"DOTA_Tooltip_special_bonus_streamer_mystic_shot_adaptive"		"Таинственный выстрел выпускает Adaptive Strike (100 + 50%% AGI)"
-		"DOTA_Tooltip_special_bonus_streamer_shift_attributes"		"+10 атрибутов при Сдвиге атрибутов"
-		"DOTA_Tooltip_special_bonus_streamer_mystic_damage"		"+30 урона от Таинственного выстрела"
-		"DOTA_Tooltip_special_bonus_streamer_subscriber_spell_amp"		"Подписчики дают +0.5%% усиления заклинаний"
-		"DOTA_Tooltip_special_bonus_streamer_double_stacks"		"+2 стака за убийство"
-		"DOTA_Tooltip_special_bonus_streamer_silence_immunity"		"Пение не прерывается сайленсом"
-		"DOTA_Tooltip_special_bonus_streamer_max_hp_damage"		"+3%% от макс. здоровья врага к урону Пения"
+		"DOTA_Tooltip_ability_special_bonus_streamer_1"		"+200 дальности Таинственного выстрела"
+		"DOTA_Tooltip_ability_special_bonus_streamer_1_Description"		"+200 дальности Таинственного выстрела"
+		"DOTA_Tooltip_ability_special_bonus_streamer_2"		"Таинственный выстрел выпускает Adaptive Strike (100 + 50%% AGI)"
+		"DOTA_Tooltip_ability_special_bonus_streamer_2_Description"		"Таинственный выстрел выпускает Adaptive Strike (100 + 50%% AGI)"
+		"DOTA_Tooltip_ability_special_bonus_streamer_3"		"+10 атрибутов при Сдвиге атрибутов"
+		"DOTA_Tooltip_ability_special_bonus_streamer_3_Description"		"+10 атрибутов при Сдвиге атрибутов"
+		"DOTA_Tooltip_ability_special_bonus_streamer_4"		"+30 урона от Таинственного выстрела"
+		"DOTA_Tooltip_ability_special_bonus_streamer_4_Description"		"+30 урона от Таинственного выстрела"
+		"DOTA_Tooltip_ability_special_bonus_streamer_5"		"Подписчики дают +0.5%% усиления заклинаний"
+		"DOTA_Tooltip_ability_special_bonus_streamer_5_Description"		"Подписчики дают +0.5%% усиления заклинаний"
+		"DOTA_Tooltip_ability_special_bonus_streamer_6"		"+2 стака за убийство"
+		"DOTA_Tooltip_ability_special_bonus_streamer_6_Description"		"+2 стака за убийство"
+		"DOTA_Tooltip_ability_special_bonus_streamer_7"		"Пение не прерывается сайленсом"
+		"DOTA_Tooltip_ability_special_bonus_streamer_7_Description"		"Пение не прерывается сайленсом"
+		"DOTA_Tooltip_ability_special_bonus_streamer_8"		"+3%% от макс. здоровья врага к урону Пения"
+		"DOTA_Tooltip_ability_special_bonus_streamer_8_Description"		"+3%% от макс. здоровья врага к урону Пения"
 
 	}
 }

@@ -58,12 +58,9 @@ function CAddonTemplateGameMode:InitGameMode()
 	print( "Template addon is loaded." )
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
 
-	-- Принудительный выбор Морфа (который теперь Стример)
-	GameRules:GetGameModeEntity():SetCustomGameForceHero("npc_dota_hero_morphling")
-	
-	-- Отключаем время выбора героя
-	GameRules:SetHeroSelectionTime(0)
-	GameRules:SetStrategyTime(0)
+	-- Включаем стандартный выбор героя
+	GameRules:SetHeroSelectionTime(30)
+	GameRules:SetStrategyTime(10)
 	GameRules:SetShowcaseTime(0)
 	GameRules:SetPreGameTime(30)
 
@@ -96,9 +93,9 @@ function LetterInvokerGameMode:OnNPCSpawned(event)
 	local spawnedUnit = EntIndexToHScript(event.entindex)
 	if not spawnedUnit or not spawnedUnit:IsHero() then return end
 	
-	-- Проверяем что это Letter Invoker или Streamer (Morphling)
+	-- Проверяем что это Letter Invoker или Streamer
 	local heroName = spawnedUnit:GetName()
-	if heroName == "npc_dota_hero_arteman" or heroName == "npc_dota_hero_letter_invoker" or heroName == "npc_dota_hero_morphling" then
+	if heroName == "npc_dota_hero_arteman" or heroName == "npc_dota_hero_letter_invoker" or heroName == "npc_dota_hero_streamer" then
 		-- Инициализируем LetterInvokerCore если еще не инициализирован
 		if LetterInvokerCore then
 			LetterInvokerCore:Init()
