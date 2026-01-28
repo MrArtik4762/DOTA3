@@ -1,0 +1,24 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7}
+{
+    "addon_name"        "dota3"
+    "addon_version"     "1.0.0"
+    "addon_author"      "Custom Developer"
+    "addon_description" "Dota 3 Custom Hero Addon - Letter Invoker System"
+    
+    "min_lua_api_version"   "12"
+    "SupportsDX11"          "true"
+    
+    "load_priority"         "100"
+    
+    "game_modes"
+    [
+        "custom"
+    ]
+    
+    "required_files"
+    [
+        "scripts/npc/npc_heroes_custom.txt",
+        "scripts/npc/npc_abilities_custom.txt",
+        "scripts/npc/npc_units_custom.txt"
+    ]
+}

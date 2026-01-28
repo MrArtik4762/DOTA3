@@ -1,0 +1,26 @@
+Set fso = CreateObject("Scripting.FileSystemObject") 
+Set file = fso.CreateTextFile("scripts/npc/npc_abilities_custom.txt", True) 
+file.WriteLine """DOTAAbilities""" 
+file.WriteLine "    {" 
+file.WriteLine "        ""Version""        ""1""" 
+ 
+file.WriteLine "        //===========================================" 
+file.WriteLine "        // ARTEMAN - Letter Selection Abilities" 
+file.WriteLine "        //===========================================" 
+ 
+file.WriteLine "        ""arteman_letter_arti""" 
+file.WriteLine "        {" 
+file.WriteLine "            ""AbilityBehavior""                ""DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE""" 
+file.WriteLine "            ""AbilityTextureName""            ""invoker_quas""" 
+file.WriteLine "            ""MaxLevel""                        ""1""" 
+file.WriteLine "            ""AbilityCooldown""                ""0""" 
+file.WriteLine "            ""AbilityManaCost""                ""0""" 
+file.WriteLine "            ""OnSpellStart""" 
+file.WriteLine "            {" 
+file.WriteLine "                ""RunScript""" 
+file.WriteLine "                {" 
+file.WriteLine "                    ""ScriptFile""            ""abilities/letter_arti.lua""" 
+file.WriteLine "                    ""Function""                ""arteman_letter_arti""" 
+file.WriteLine "                }" 
+file.WriteLine "            }" 
+file.WriteLine "        }"

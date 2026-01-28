@@ -1,0 +1,128 @@
+"lang"		"russian"
+
+{
+	"Language"		"Russian"
+
+	"Tokens"
+
+	{
+		"addon_game_name"		"Letter Invoker"
+
+		// Ability: Letter ARTI
+		"DOTA_Tooltip_ability_letter_arti"		"Буква ARTI"
+		"DOTA_Tooltip_ability_letter_arti_Description"		"Добавляет букву ARTI в ваш буфер, наделяя вас Силой. Каждая буква усиливает могущественные комбинации заклинаний."
+		"DOTA_Tooltip_ability_letter_arti_Lore"		"Древние символы ARTI дарят мудрость, превосходящую смертное понимание."
+		"DOTA_Tooltip_ability_letter_arti_Note0"		"Требуется минимум 3 буквы для использования заклинания."
+
+		// Ability: Letter PIRA
+		"DOTA_Tooltip_ability_letter_pira"		"Буква PIRA"
+		"DOTA_Tooltip_ability_letter_pira_Description"		"Добавляет букву PIRA в ваш буфер, наделяя вас Интеллектом. Каждая буква усиливает могущественные комбинации заклинаний."
+		"DOTA_Tooltip_ability_letter_pira_Lore"		"Древние символы PIRA дарят мудрость, превосходящую смертное понимание."
+		"DOTA_Tooltip_ability_letter_pira_Note0"		"Требуется минимум 3 буквы для использования заклинания."
+
+		// Ability: Letter MONT
+		"DOTA_Tooltip_ability_letter_mont"		"Буква MONT"
+		"DOTA_Tooltip_ability_letter_mont_Description"		"Добавляет букву MONT в ваш буфер, наделяя вас Ловкостью. Каждая буква усиливает могущественные комбинации заклинаний."
+		"DOTA_Tooltip_ability_letter_mont_Lore"		"Древние символы MONT дарят мудрость, превосходящую смертное понимание."
+		"DOTA_Tooltip_ability_letter_mont_Note0"		"Требуется минимум 3 буквы для использования заклинания."
+
+		// Ability: Letter Invoke
+		"DOTA_Tooltip_ability_letter_invoke"		"Вызов"
+		"DOTA_Tooltip_ability_letter_invoke_Description"		"Комбинирует накопленные буквы в могущественное заклинание. Созданное заклинание зависит от комбинации использованных букв."
+		"DOTA_Tooltip_ability_letter_invoke_Lore"		"Мастерство призывателя букв требует точного времени и знания тайных комбинаций."
+		"DOTA_Tooltip_ability_letter_invoke_Note0"		"Требуется минимум 3 буквы для вызова."
+		"DOTA_Tooltip_ability_letter_invoke_Note1"		"Различные комбинации букв создают разные заклинания."
+
+		// Modifier: ARTI
+		"DOTA_Tooltip_modifier_mod_arti"		"ARTI"
+		"DOTA_Tooltip_modifier_mod_arti_Description"		"Дарует бонус к Силе. Увеличивается в зависимости от количества букв ARTI в буфере."
+		"DOTA_Tooltip_modifier_mod_arti_Lore"		"Символ ARTI направляет силу структуры и стойкости."
+		"DOTA_Tooltip_modifier_mod_arti_buff"		"+{s:bonus_strength} К Силе"
+
+		// Modifier: MONT
+		"DOTA_Tooltip_modifier_mod_mont"		"MONT"
+		"DOTA_Tooltip_modifier_mod_mont_Description"		"Дарует бонус к Ловкости. Увеличивается в зависимости от количества букв MONT в буфере."
+		"DOTA_Tooltip_modifier_mod_mont_Lore"		"Символ MONT воплощает скорость и быстрое движение."
+		"DOTA_Tooltip_modifier_mod_mont_buff"		"+{s:bonus_agility} К Ловкости"
+
+		// Modifier: PIRA
+		"DOTA_Tooltip_modifier_mod_pira"		"PIRA"
+		"DOTA_Tooltip_modifier_mod_pira_Description"		"Дарует бонус к Интеллекту. Увеличивается в зависимости от количества букв PIRA в буфере."
+		"DOTA_Tooltip_modifier_mod_pira_Lore"		"Символ PIRA излучает арканную энергию и древнюю мудрость."
+		"DOTA_Tooltip_modifier_mod_pira_buff"		"+{s:bonus_intellect} К Интеллекту"
+
+		// Invoked Ability: Fortress of Structure
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure"		"Крепость Структуры"
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure_Description"		"Создает могущественную оборонительную крепость вокруг призывателя, даруя огромную броню и сопротивление урону."
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure_Lore"		"Высшее проявление силы ARTI, материализующее непроницаемую крепость из чистой структуры."
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure_Note0"		"Дарует значительный бонус к броне."
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure_Note1"		"Длительность масштабируется комбинацией ARTI."
+
+		// Invoked Ability: Velocity Storm
+		"DOTA_Tooltip_ability_invoked_velocity_storm"		"Буря Скорости"
+		"DOTA_Tooltip_ability_invoked_velocity_storm_Description"		"Выпускает разрушительную бурю чистой скорости, значительно увеличивая скорость передвижения и атаки всех союзников."
+		"DOTA_Tooltip_ability_invoked_velocity_storm_Lore"		"Когда энергия MONT достигает пика, сама реальность подчиняется воле скорости."
+		"DOTA_Tooltip_ability_invoked_velocity_storm_Note0"		"Влияет на всех союзников поблизости."
+		"DOTA_Tooltip_ability_invoked_velocity_storm_Note1"		"Сильно увеличивает скорость передвижения и атаки."
+
+		// Invoked Ability: Inferno Blast
+		"DOTA_Tooltip_ability_invoked_inferno_blast"		"Инфернальный Взрыв"
+		"DOTA_Tooltip_ability_invoked_inferno_blast_Description"		"Высвобождает разрушительный взрыв чистой инфернальной энергии, нанося огромный магический урон врагам на области."
+		"DOTA_Tooltip_ability_invoked_inferno_blast_Lore"		"Символы PIRA воспламеняют сам воздух, создавая взрывы потустороннего пламени."
+		"DOTA_Tooltip_ability_invoked_inferno_blast_Note0"		"Наносит магический урон на большой области."
+		"DOTA_Tooltip_ability_invoked_inferno_blast_Note1"		"Урон масштабируется количеством букв PIRA."
+
+		// ============================================
+		// HERO: Стример (Streamer)
+		// ============================================
+
+		// Hero
+		"npc_dota_hero_morphling"		"Стример"
+		"npc_dota_hero_streamer"		"Стример"
+		"npc_dota_hero_streamer_description"		"Герой-ловкач, накапливающий силу через убийства"
+
+		// Ability Q: Mystic Shot
+		"DOTA_Tooltip_ability_streamer_mystic_shot"		"Таинственный выстрел"
+		"DOTA_Tooltip_ability_streamer_mystic_shot_Description"		"Выпускает линейный снаряд, наносящий урон первому врагу. Урон: 80/120/160/200 + 70%% от ловкости."
+		"DOTA_Tooltip_ability_streamer_mystic_shot_Lore"		"Как у Ezreal, но в Dota!"
+		"DOTA_Tooltip_ability_streamer_mystic_shot_base_damage"		"БАЗОВЫЙ УРОН:"
+		"DOTA_Tooltip_ability_streamer_mystic_shot_damage_per_agility"		"УРОН ОТ ЛОВКОСТИ:"
+		"DOTA_Tooltip_ability_streamer_mystic_shot_cooldown"		"ПЕРЕЗАРЯДКА:"
+		"DOTA_Tooltip_ability_streamer_mystic_shot_AbilityCastRange"		"ДАЛЬНОСТЬ:"
+
+		// Ability W: Attribute Shift
+		"DOTA_Tooltip_ability_streamer_attribute_shift"		"Сдвиг атрибутов"
+		"DOTA_Tooltip_ability_streamer_attribute_shift_Description"		"Перекачивает очки между Силой и Ловкостью со скоростью 4/8/12/16 в секунду."
+		"DOTA_Tooltip_ability_streamer_attribute_shift_Lore"		"Классическая механика Morphling."
+		"DOTA_Tooltip_ability_streamer_attribute_shift_shift_rate"		"СКОРОСТЬ ПЕРЕКАЧКИ:"
+
+		// Ability E: Streamer (Passive)
+		"DOTA_Tooltip_ability_streamer_streamer"		"Стример"
+		"DOTA_Tooltip_ability_streamer_streamer_Description"		"Пассивная. За каждое убийство героя получает +1 подписчик. Каждый подписчик даёт +1 ловкость и +0.3%% к усилению заклинаний. Без лимита стаков."
+		"DOTA_Tooltip_ability_streamer_streamer_Lore"		"Чем больше фрагов, тем больше подписчиков!"
+		"DOTA_Tooltip_ability_streamer_streamer_agility_per_stack"		"ЛОВКОСТИ ЗА ПОДПИСЧИКА:"
+		"DOTA_Tooltip_ability_streamer_streamer_spell_amp_per_stack"		"УСИЛЕНИЕ ЗАКЛИНАНИЙ:"
+
+		// Ability R: Singing
+		"DOTA_Tooltip_ability_streamer_singing"		"Пение"
+		"DOTA_Tooltip_ability_streamer_singing_Description"		"Начинает пение на 6 секунд, нанося чистый урон врагам в радиусе 500 каждую секунду. Урон: 70/110/150 + 2%% от макс. здоровья врага. Можно двигаться. Прерывается станом или сайленсом."
+		"DOTA_Tooltip_ability_streamer_singing_Lore"		"Музыка смертельна..."
+		"DOTA_Tooltip_ability_streamer_singing_duration"		"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_streamer_singing_radius"		"РАДИУС:"
+		"DOTA_Tooltip_ability_streamer_singing_damage_per_second"		"БАЗОВЫЙ УРОН В СЕКУНДУ:"
+		"DOTA_Tooltip_ability_streamer_singing_max_health_damage_pct"		"УРОН ОТ МАКС. ЗДОРОВЬЯ:"
+		"DOTA_Tooltip_ability_streamer_singing_scepter_description"		"Абсолютная способность: +250 радиуса, +40 чистого урона в сек, -25%% скорости врагам, True Sight"
+		"DOTA_Tooltip_ability_streamer_singing_shard_description"		"Каждые 1.5 сек выпускает волну на 700 радиуса, нанося 120 магического урона + 40%% от ловкости"
+
+		// Talents
+		"DOTA_Tooltip_special_bonus_streamer_mystic_shot_range"		"+200 дальности Таинственного выстрела"
+		"DOTA_Tooltip_special_bonus_streamer_mystic_shot_adaptive"		"Таинственный выстрел выпускает Adaptive Strike (100 + 50%% AGI)"
+		"DOTA_Tooltip_special_bonus_streamer_shift_attributes"		"+10 атрибутов при Сдвиге атрибутов"
+		"DOTA_Tooltip_special_bonus_streamer_mystic_damage"		"+30 урона от Таинственного выстрела"
+		"DOTA_Tooltip_special_bonus_streamer_subscriber_spell_amp"		"Подписчики дают +0.5%% усиления заклинаний"
+		"DOTA_Tooltip_special_bonus_streamer_double_stacks"		"+2 стака за убийство"
+		"DOTA_Tooltip_special_bonus_streamer_silence_immunity"		"Пение не прерывается сайленсом"
+		"DOTA_Tooltip_special_bonus_streamer_max_hp_damage"		"+3%% от макс. здоровья врага к урону Пения"
+
+	}
+}

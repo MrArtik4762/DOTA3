@@ -1,0 +1,418 @@
+// Dota Abilities File - Custom abilities for Streamer hero
+"Version" "1"
+"DOTAAbilities"
+{
+    //=================================================================================
+    // Способность Q: Mystic Shot
+    //=================================================================================
+    "streamer_mystic_shot"
+    {
+        "BaseClass"                     "ability_lua"
+        "ID"                            "8001"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "FightRecapLevel"               "1"
+        
+        "AbilityCastRange"              "1200"
+        "AbilityCastPoint"              "0.25"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        
+        "AbilityCooldown"               "7.0 6.0 5.0 4.0"
+        "AbilityManaCost"               "60"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "damage_per_agility"    "0.7"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "base_damage"           "80 120 160 200"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "projectile_speed"      "1800"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "projectile_width"      "110"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "adaptive_strike_delay" "0.3"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "adaptive_strike_damage" "100"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "adaptive_strike_agility_pct" "0.5"
+            }
+        }
+        
+        "precache"
+        {
+            "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts"
+            "particle"                  "particles/units/heroes/hero_morphling/morphling_adaptive_strike.vpcf"
+        }
+        
+        "ScriptFile"                    "scripts/vscripts/abilities/streamer_mystic_shot.lua"
+    }
+    
+    //=================================================================================
+    // Способность W: Attribute Shift
+    //=================================================================================
+    "streamer_attribute_shift"
+    {
+        "BaseClass"                     "ability_lua"
+        "ID"                            "8002"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityCastPoint"              "0.0"
+        
+        "AbilityCooldown"               "0"
+        "AbilityManaCost"               "0"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "shift_rate"            "4 8 12 16"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "max_shifts"            "50"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage_per_shift" "2"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_health_per_shift" "20"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "talent_bonus_attributes" "10"
+            }
+        }
+        
+        "precache"
+        {
+            "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts"
+            "particle"                  "particles/units/heroes/hero_morphling/morphling_morph_agi.vpcf"
+            "particle"                  "particles/units/heroes/hero_morphling/morphling_morph_str.vpcf"
+        }
+        
+        "ScriptFile"                    "scripts/vscripts/abilities/streamer_attribute_shift.lua"
+    }
+    
+    //=================================================================================
+    // Способность E: Streamer (Пассивная)
+    //=================================================================================
+    "streamer_streamer"
+    {
+        "BaseClass"                     "ability_lua"
+        "ID"                            "8003"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "agility_per_stack"     "1"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "spell_amp_per_stack"   "0.3"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "talent_spell_amp_per_stack" "0.5"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "talent_stacks_per_kill" "2"
+            }
+        }
+        
+        "precache"
+        {
+            "particle"                  "particles/units/heroes/hero_morphling/morphling_waveform.vpcf"
+        }
+        
+        "ScriptFile"                    "scripts/vscripts/abilities/streamer_streamer.lua"
+    }
+    
+    //=================================================================================
+    // Способность R: Singing (Ультимат)
+    //=================================================================================
+    "streamer_singing"
+    {
+        "BaseClass"                     "ability_lua"
+        "ID"                            "8004"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "FightRecapLevel"               "2"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        
+        "AbilityCastPoint"              "0.4"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+        "AbilityChannelTime"            "6.0"
+        
+        "AbilityCooldown"               "120 100 80"
+        "AbilityManaCost"               "150 200 250"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "radius"                "500"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_per_second"     "70 110 150"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "max_health_damage_pct" "2.0"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "interval"              "1.0"
+            }
+            
+            // Aghanim's Scepter
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "scepter_radius_bonus"  "250"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "scepter_bonus_damage"  "40"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "scepter_slow_pct"      "25"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "scepter_true_sight"    "1"
+            }
+            
+            // Aghanim's Shard
+            "09"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "shard_wave_interval"   "1.5"
+            }
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "shard_wave_radius"     "700"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "shard_wave_damage"     "120"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "shard_agility_pct"     "0.4"
+            }
+            
+            // Talent 25
+            "13"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "talent_silence_immunity" "1"
+            }
+            "14"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "talent_max_hp_damage_bonus" "3.0"
+            }
+        }
+        
+        "precache"
+        {
+            "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts"
+            "particle"                  "particles/units/heroes/hero_sandking/sandking_epicenter.vpcf"
+            "particle"                  "particles/units/heroes/hero_morphling/morphling_waveform.vpcf"
+        }
+        
+        "ScriptFile"                    "scripts/vscripts/abilities/streamer_singing.lua"
+    }
+    
+    //=================================================================================
+    // ТАЛАНТЫ (8 слотов)
+    //=================================================================================
+    
+    //---------- 10 уровень ----------
+    
+    // Левый талант: +200 дальности Mystic Shot
+    "special_bonus_streamer_1"
+    {
+        "ID"                            "8010"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "value"                 "200"
+            }
+        }
+    }
+    
+    // Правый талант: Mystic Shot выпускает Adaptive Strike
+    "special_bonus_streamer_2"
+    {
+        "ID"                            "8011"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "value"                 "1"
+            }
+        }
+    }
+    
+    //---------- 15 уровень ----------
+    
+    // Левый талант: +10 атрибутов при Attribute Shift
+    "special_bonus_streamer_3"
+    {
+        "ID"                            "8012"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "value"                 "10"
+            }
+        }
+    }
+    
+    // Правый талант: +30 урона от Mystic Shot
+    "special_bonus_streamer_4"
+    {
+        "ID"                            "8013"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "value"                 "30"
+            }
+        }
+    }
+    
+    //---------- 20 уровень ----------
+    
+    // Левый талант: Подписчики дают +0.5% spell amp
+    "special_bonus_streamer_5"
+    {
+        "ID"                            "8014"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "value"                 "0.5"
+            }
+        }
+    }
+    
+    // Правый талант: +2 стака за килл
+    "special_bonus_streamer_6"
+    {
+        "ID"                            "8015"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "value"                 "2"
+            }
+        }
+    }
+    
+    //---------- 25 уровень ----------
+    
+    // Левый талант: Ульта не прерывается сайленсом
+    "special_bonus_streamer_7"
+    {
+        "ID"                            "8016"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "value"                 "1"
+            }
+        }
+    }
+    
+    // Правый талант: +3% от max HP урон
+    "special_bonus_streamer_8"
+    {
+        "ID"                            "8017"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "value"                 "3.0"
+            }
+        }
+    }
+} 

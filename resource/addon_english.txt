@@ -1,0 +1,64 @@
+"lang"		"english"
+
+{
+	"Language"		"English"
+
+	"Tokens"
+
+	{
+		"addon_game_name"		"Letter Invoker"
+
+		// Ability: Letter PIRA
+		"DOTA_Tooltip_ability_letter_pira"		"PIRA Letter"
+		"DOTA_Tooltip_ability_letter_pira_Description"		"Adds the PIRA letter to your buffer, empowering you with Intelligence. Each letter contributes to powerful spell combinations."
+		"DOTA_Tooltip_ability_letter_pira_Lore"		"The ancient sigils of PIRA grant wisdom beyond mortal comprehension."
+		"DOTA_Tooltip_ability_letter_pira_Note0"		"Requires minimum 3 letters to invoke a spell."
+
+		// Ability: Letter Invoke
+		"DOTA_Tooltip_ability_letter_invoke"		"Invoke"
+		"DOTA_Tooltip_ability_letter_invoke_Description"		"Combines your accumulated letters into a powerful spell. The spell created depends on the combination of letters used."
+		"DOTA_Tooltip_ability_letter_invoke_Lore"		"Mastery of the letter invoker requires precise timing and knowledge of arcane combinations."
+		"DOTA_Tooltip_ability_letter_invoke_Note0"		"Requires at least 3 letters to invoke."
+		"DOTA_Tooltip_ability_letter_invoke_Note1"		"Different letter combinations create different spells."
+
+		// Modifier: ARTI
+		"DOTA_Tooltip_modifier_mod_arti"		"ARTI"
+		"DOTA_Tooltip_modifier_mod_arti_Description"		"Grants bonus Strength. Increases based on number of ARTI letters in buffer."
+		"DOTA_Tooltip_modifier_mod_arti_Lore"		"The sigil of ARTI channels the power of structure and fortitude."
+		"DOTA_Tooltip_modifier_mod_arti_buff"		"+{s:bonus_strength} Strength"
+
+		// Modifier: MONT
+		"DOTA_Tooltip_modifier_mod_mont"		"MONT"
+		"DOTA_Tooltip_modifier_mod_mont_Description"		"Grants bonus Agility. Increases based on number of MONT letters in buffer."
+		"DOTA_Tooltip_modifier_mod_mont_Lore"		"The sigil of MONT embodies velocity and swift motion."
+		"DOTA_Tooltip_modifier_mod_mont_buff"		"+{s:bonus_agility} Agility"
+
+		// Modifier: PIRA
+		"DOTA_Tooltip_modifier_mod_pira"		"PIRA"
+		"DOTA_Tooltip_modifier_mod_pira_Description"		"Grants bonus Intelligence. Increases based on number of PIRA letters in buffer."
+		"DOTA_Tooltip_modifier_mod_pira_Lore"		"The sigil of PIRA radiates arcane energy and ancient wisdom."
+		"DOTA_Tooltip_modifier_mod_pira_buff"		"+{s:bonus_intellect} Intelligence"
+
+		// Invoked Ability: Fortress of Structure
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure"		"Fortress of Structure"
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure_Description"		"Creates a powerful defensive fortress around the invoker, granting massive armor and damage resistance."
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure_Lore"		"The ultimate expression of ARTI power, manifesting an impenetrable fortress of pure structure."
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure_Note0"		"Provides significant armor bonus."
+		"DOTA_Tooltip_ability_invoked_fortress_of_structure_Note1"		"Duration scales with ARTI combination."
+
+		// Invoked Ability: Velocity Storm
+		"DOTA_Tooltip_ability_invoked_velocity_storm"		"Velocity Storm"
+		"DOTA_Tooltip_ability_invoked_velocity_storm_Description"		"Unleashes a devastating storm of pure velocity, greatly increasing movement and attack speed for all allies."
+		"DOTA_Tooltip_ability_invoked_velocity_storm_Lore"		"When MONT energy reaches its peak, reality itself bends to the will of speed."
+		"DOTA_Tooltip_ability_invoked_velocity_storm_Note0"		"Affects all nearby allies."
+		"DOTA_Tooltip_ability_invoked_velocity_storm_Note1"		"Massively increases movement and attack speed."
+
+		// Invoked Ability: Inferno Blast
+		"DOTA_Tooltip_ability_invoked_inferno_blast"		"Inferno Blast"
+		"DOTA_Tooltip_ability_invoked_inferno_blast_Description"		"Releases a devastating blast of pure infernal energy, dealing massive magical damage to enemies in an area."
+		"DOTA_Tooltip_ability_invoked_inferno_blast_Lore"		"The PIRA sigils ignite the very air, creating explosions of otherworldly flame."
+		"DOTA_Tooltip_ability_invoked_inferno_blast_Note0"		"Deals magical damage in a large area."
+		"DOTA_Tooltip_ability_invoked_inferno_blast_Note1"		"Damage scales with number of PIRA letters."
+
+	}
+}
